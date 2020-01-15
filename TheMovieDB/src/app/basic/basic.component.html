@@ -1,0 +1,39 @@
+
+<div class="backset">
+
+<!-- 
+    <div  class="center">
+        <h3>{{ Title }}</h3>
+    </div>
+    <div class="center">
+            <input type="button" value="Rating:{{ Rating }}">
+        </div>
+
+    <div class="center">
+        <p>{{Des}}</p>
+    </div>
+
+
+-->
+
+
+        
+    
+    <div *ngFor="let item of Movies">
+        
+        <div><h3>{{item.Title}}</h3></div>
+        <div>Rating: {{ item.Rating}}</div>
+        <p class="details">{{ item.ShortDescription }}</p>
+        <h6>Do you like this movie?</h6>
+    <div>{{ RatingUp }} : {{RatingDown}}</div>
+        <button (click)="ratingMovieUp(1)">Like</button>
+        <button (click)="ratingMovieDown(1)">Dislike</button>
+
+    </div>
+</div>
+
+
+  
+
+
+
